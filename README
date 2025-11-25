@@ -1,0 +1,104 @@
+# Data Health Dashboard
+
+A lightweight data-quality checker built in Python.  
+It loads a CSV file, runs a series of data health checks, prints a summary, and saves a JSON report.
+
+---
+
+## 🚀 Features (Phase 1 Complete)
+
+### ✔ CSV Loading  
+Automatically detects comma-separated or tab-separated files.
+
+### ✔ Data Health Checks  
+Currently includes:
+- **Missing values**
+- **Duplicate rows**
+
+### ✔ JSON Reporting  
+Every run generates a timestamped JSON file stored in the `reports/` folder.
+
+### ✔ CLI Tool  
+Run the program from the command line with:
+
+```bash
+python main.py yourfile.csv
+```
+
+---
+
+## 📂 Project Structure
+
+```
+data-health-dashboard/
+│── main.py
+│── requirements.txt
+│── test.csv
+│── README.md
+│── data_health/
+│     ├── __init__.py
+│     ├── checker.py
+│
+└── reports/   (auto-generated JSON reports)
+```
+
+---
+
+## 📦 Installation
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+Run the tool on any CSV:
+
+```bash
+python main.py yourfile.csv
+```
+
+Or skip saving the JSON report:
+
+```bash
+python main.py yourfile.csv --no-save
+```
+
+Reports will be generated in the `reports/` directory.
+
+---
+
+## 🛠 Future Phases
+
+### **Phase 2 – SQLite Database Storage**  
+Save each run + each check into a local database for history tracking.
+
+### **Phase 3 – REST API (FastAPI)**  
+Expose endpoints like:
+- `POST /analyze`
+- `GET /runs`
+- `GET /runs/{id}`
+
+### **Phase 4 – Web Dashboard**  
+A simple UI to browse past runs and visualize data health results.
+
+### **Phase 5 – Docker + Deployment**  
+Containerize the app and deploy to the cloud.
+
+---
+
+## 📘 About This Project
+
+This tool is a hands-on learning project built to strengthen skills used in real-world technical roles:
+- Python & pandas
+- Data validation
+- CLI tool design
+- JSON reporting
+- Clean program structure
+- Git workflow
+- Future: databases, REST APIs, UI, and DevOps practices
+
